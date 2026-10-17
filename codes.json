@@ -1,0 +1,163 @@
+{
+  "about": "Codes and menu paths to forward the calls you don't answer to another number (conditional call forwarding), US and Canada. Replace [number] with the 10-digit destination number. Source: https://odilelabs.com/forwarding (Odile Labs), checked October 2026; VoIP steps from each provider's own help pages, read 12 October 2026.",
+  "license": "CC BY 4.0: reuse freely, credit 'Odile Labs, odilelabs.com/forwarding'.",
+  "mobile_carriers": [
+    {
+      "carrier": "AT&T",
+      "country": "US",
+      "no_answer": "**61*+1[number]**10#",
+      "busy": "**67*+1[number]#",
+      "unreachable": "**62*+1[number]#",
+      "all_calls": "**21*+1[number]#",
+      "cancel": [
+        "##61#",
+        "##67#",
+        "##62#",
+        "##21#"
+      ],
+      "notes": "The 10 in the no-answer code is the ring time in seconds; without it the carrier waits about 20 seconds."
+    },
+    {
+      "carrier": "T-Mobile",
+      "country": "US",
+      "no_answer": "**61*+1[number]**10#",
+      "busy": "**67*+1[number]#",
+      "unreachable": "**62*+1[number]#",
+      "all_calls": "**21*+1[number]#",
+      "cancel": [
+        "##61#",
+        "##67#",
+        "##62#",
+        "##21#"
+      ],
+      "notes": "Same codes as AT&T."
+    },
+    {
+      "carrier": "Verizon",
+      "country": "US",
+      "no_answer": "*71[number]",
+      "busy": "*71[number]",
+      "all_calls": "*72[number]",
+      "cancel": [
+        "*73"
+      ],
+      "notes": "*71 covers no answer and busy; it rings 3 to 6 times first and Verizon has no shorter setting. On an iPhone, turn off Live Voicemail first (Settings, Apps, Phone, Live Voicemail): Verizon says it stops *71 from working."
+    },
+    {
+      "carrier": "Mint Mobile",
+      "country": "US",
+      "no_answer": "**61*1[number]#",
+      "cancel": [
+        "##61#"
+      ]
+    },
+    {
+      "carrier": "Visible",
+      "country": "US",
+      "no_answer": null,
+      "notes": "Visible's *71 forwards only while you're on another call; it cannot forward only unanswered calls."
+    },
+    {
+      "carrier": "Google Fi",
+      "country": "US",
+      "no_answer": null,
+      "notes": "No forwarding for unanswered calls."
+    },
+    {
+      "carrier": "Rogers, Bell, Telus (mobile)",
+      "country": "CA",
+      "no_answer": "**61*+1[number]**10#",
+      "notes": "Try the AT&T codes; if they are refused, the carrier's support sets it."
+    }
+  ],
+  "landlines": [
+    {
+      "provider": "AT&T or Verizon Fios landline",
+      "country": "US",
+      "no_answer": "*92[number]",
+      "busy": "*90[number]",
+      "cancel": [
+        "*93",
+        "*91"
+      ]
+    },
+    {
+      "provider": "Rogers home phone",
+      "country": "CA",
+      "no_answer": "*92[number]",
+      "cancel": [
+        "*93"
+      ],
+      "notes": "Stay on the line 5 seconds; it forwards after 4 rings. With Rogers voicemail on, ask Rogers to switch it."
+    },
+    {
+      "provider": "Telus home phone",
+      "country": "CA",
+      "no_answer": "*92[number]",
+      "ring_count": "*94 sets 2 to 9 rings",
+      "cancel": [
+        "*93"
+      ],
+      "notes": "On newer Telus accounts, Telus sets the number for you."
+    },
+    {
+      "provider": "Bell home phone",
+      "country": "CA",
+      "no_answer": null,
+      "notes": "Ask Bell."
+    }
+  ],
+  "voip": [
+    {
+      "provider": "RingCentral",
+      "steps": "App: Settings, Phone, Call handling, Edit, Work hours (and After hours), Missed calls, Forward to external number."
+    },
+    {
+      "provider": "Google Voice for Workspace",
+      "steps": "Admin console, the ring group, Configuration, Unanswered calls, Forward the caller, then the number. Forwards after 30 seconds."
+    },
+    {
+      "provider": "Google Voice (personal)",
+      "steps": null,
+      "notes": "Cannot forward only missed calls; linked numbers all ring at once."
+    },
+    {
+      "provider": "Vonage Business",
+      "steps": "Admin Portal, Phone System, Extensions, edit the extension, Call Forwarding, Follow Me: your extension first, then the number."
+    },
+    {
+      "provider": "Nextiva",
+      "steps": "Voice portal, Users, the user, Actions, Voice Settings, Forwarding, Call forwarding (unanswered): the number and the rings.",
+      "notes": "Admins only; covers direct calls, not call groups."
+    },
+    {
+      "provider": "Zoom Phone",
+      "steps": "Settings, Phone, Voicemail and forwarding, When a call goes unanswered, Forward to External Contacts.",
+      "notes": "Add the number as an external contact first; an admin may need to allow forwarding outside Zoom."
+    },
+    {
+      "provider": "Quo (formerly OpenPhone)",
+      "steps": "In the number's call flow: a Ring users step, then Forward call to the number, then Publish."
+    },
+    {
+      "provider": "8x8",
+      "steps": "Admin Console, Users, the user, Call forwarding rules, When user does not answer, Forward directly to a custom number."
+    },
+    {
+      "provider": "Microsoft Teams Phone",
+      "steps": "Settings, Calls, Call handling and forwarding, If unanswered: the number and the ring time in seconds."
+    },
+    {
+      "provider": "3CX",
+      "steps": "Web client, Settings, Call Forwarding, Unanswered calls, External number, with the seconds.",
+      "notes": "Calls through a ring group or queue skip these personal rules."
+    },
+    {
+      "provider": "Ooma Office",
+      "steps": null,
+      "notes": "Cannot send only unanswered calls to an outside number."
+    }
+  ],
+  "check_it_worked": "Call the line from another phone and let it ring; after a few rings the forwarded number should answer.",
+  "anything_else": "Grasshopper, Dialpad, GoTo, Spectrum, Comcast and others: ask the provider for 'forward on no answer' to the number."
+}
