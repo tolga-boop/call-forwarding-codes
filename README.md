@@ -30,7 +30,7 @@ Notes:
 |---|---|---|---|
 | AT&T or Verizon Fios landline (US) | `*92[number]` | `*93`, `*91` | Busy: `*90[number]`. |
 | Rogers home phone (CA) | `*92[number]` | `*93` | Stay on the line 5 seconds; it forwards after 4 rings. With Rogers voicemail on, ask Rogers to switch it. |
-| Telus home phone (CA) | `*92[number]` | `*93` | `*94` sets 2 to 9 rings On newer Telus accounts, Telus sets the number for you. |
+| Telus home phone (CA) | `*92[number]` | `*93` | `*94` sets 2 to 9 rings. On newer Telus accounts, Telus sets the number for you. |
 | Bell home phone (CA) | ask the provider | – | Ask Bell. |
 
 ## VoIP and office phone systems
